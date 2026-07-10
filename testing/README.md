@@ -78,12 +78,15 @@ Las pruebas realizadas permitieron comprobar que el sistema:
 - activa el riego cuando corresponde,
 - registra mensajes de control mediante el monitor serial.
 
+
 ## Observaciones
 
 Durante algunas pruebas se presentaron mensajes relacionados con la conexión WiFi, por ejemplo:
 
 - `No se pudo conectar al WiFi`
 - `WiFi desconectado. Reintentando...`
+- 
+  Esto indica que la conectividad WiFi aún requería ajustes durante el desarrollo, pero no impidió validar la lógica principal del sistema de riego.
 
 ## Galería de evidencias
 
@@ -107,4 +110,3 @@ Durante algunas pruebas se presentaron mensajes relacionados con la conexión Wi
 
 ![Prueba riego exitoso](prueba_riego_exitoso.jpg)
 
-Esto indica que la conectividad WiFi aún requería ajustes durante el desarrollo, pero no impidió validar la lógica principal del sistema de riego.
