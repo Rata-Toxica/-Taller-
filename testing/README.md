@@ -20,7 +20,7 @@ Se colocó el sensor en tierra seca y se registró el valor entregado por el ESP
 
 **Resultado esperado:** el sistema debe identificar que el suelo necesita riego.
 
-**Evidencia:** `prueba_suelo_seco.jpg`
+
 
 ### 2. Lectura en suelo húmedo
 
@@ -28,7 +28,7 @@ Se colocó el sensor en tierra húmeda y se registró el valor entregado por el 
 
 **Resultado esperado:** el sistema debe indicar que no es necesario regar.
 
-**Evidencia:** `prueba_suelo_humedo.jpg`
+
 
 ### 3. Calibración del sensor
 
@@ -42,19 +42,19 @@ Los valores mayores al umbral se interpretan como suelo seco y los valores menor
 
 Se comprobó que el ESP32 envía los datos del sensor en formato JSON mediante Bluetooth y conexión USB serial.
 
-**Evidencia:** `prueba_comunicacion.jpg`
+
 
 ### 5. Recepción de datos en Python
 
 Se verificó que la aplicación Python recibe los datos enviados por el ESP32.
 
-**Evidencia:** `prueba_python.jpg`
+
 
 ### 6. Base de datos y dashboard
 
 Se comprobó el almacenamiento y visualización de las mediciones cuando estas funciones estuvieron disponibles.
 
-**Evidencia:** `prueba_dashboard.jpg`
+
 
 ## Resultado general
 
