@@ -13,7 +13,7 @@ Esta imagen muestra el montaje completo del prototipo, incluyendo:
 - bolsa con tierra,
 - sensor de humedad,
 - relé,
-- electroválvula,
+- electroválvula (fue eliminada del proyecto),
 - cableado,
 - conexión al computador.
 
