@@ -59,8 +59,8 @@ void enviarDatos(int humedad, bool suelo_seco, bool riego) {
   json += "}";
 
   SerialBT.println(json); // Enviar datos a través de Bluetooth
+  Serial.println(json);      // USB → app2.py
 }
-
 // =======================
 // SETUP
 // =======================
