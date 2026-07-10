@@ -85,4 +85,26 @@ Durante algunas pruebas se presentaron mensajes relacionados con la conexión Wi
 - `No se pudo conectar al WiFi`
 - `WiFi desconectado. Reintentando...`
 
+## Galería de evidencias
+
+### Montaje general
+
+![Montaje general](montaje_general.jpg)
+
+### Sensor en la tierra
+
+![Sensor en la tierra](sensor_en_tierra.jpg)
+
+### Prueba de suelo húmedo
+
+![Prueba suelo húmedo](prueba_suelo_humedo.jpg)
+
+### Prueba de suelo seco sin riego
+
+![Prueba suelo seco sin riego](prueba_suelo_seco_sin_riego.jpg)
+
+### Prueba de riego exitoso
+
+![Prueba riego exitoso](prueba_riego_exitoso.jpg)
+
 Esto indica que la conectividad WiFi aún requería ajustes durante el desarrollo, pero no impidió validar la lógica principal del sistema de riego.
