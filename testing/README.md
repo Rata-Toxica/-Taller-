@@ -1,61 +1,88 @@
-# Pruebas y Evidencias del Sistema
+# Pruebas y validación del sistema
 
-Esta carpeta contiene las pruebas realizadas para verificar el correcto funcionamiento del sistema inteligente de monitoreo de humedad y recomendación de riego.
+Esta carpeta contiene evidencias y resultados de las pruebas realizadas al sistema inteligente de monitoreo de humedad y recomendación de riego.
 
-## Objetivos de las pruebas
+## Evidencias disponibles
 
-- Comprobar la lectura del sensor de humedad.
-- Verificar la detección de suelo seco y húmedo.
-- Comprobar la comunicación entre el ESP32 y el computador.
-- Verificar el envío de datos mediante Bluetooth o conexión USB.
-- Comprobar el almacenamiento de las mediciones.
-- Verificar el funcionamiento del dashboard.
-- Registrar problemas encontrados y sus soluciones.
+### 1. Montaje general del sistema
+
+Archivo: `montaje_general.jpg`
+
+Esta imagen muestra el montaje completo del prototipo, incluyendo:
+
+- bolsa con tierra,
+- sensor de humedad,
+- relé,
+- electroválvula,
+- cableado,
+- conexión al computador.
+
+### 2. Sensor de humedad en la tierra
+
+Archivo: `sensor_en_tierra.jpg`
+
+Esta imagen muestra la instalación física del sensor dentro de la tierra utilizada para las pruebas.
 
 ## Pruebas realizadas
 
-### 1. Lectura en suelo seco
+### 1. Detección de suelo húmedo
 
-Se colocó el sensor en tierra seca y se registró el valor entregado por el ESP32.
+Archivo: `prueba_suelo_humedo.jpg`
 
-**Resultado esperado:** el sistema debe identificar que el suelo necesita riego.
+**Resultado observado:**
 
+- Humedad medida: 283
+- El sistema indica: `Suelo humedo: no se riega`
 
+**Conclusión:**
 
-### 2. Lectura en suelo húmedo
+El sistema detectó correctamente una condición de suelo húmedo y decidió no activar el riego.
 
-Se colocó el sensor en tierra húmeda y se registró el valor entregado por el ESP32.
+### 2. Detección de suelo seco sin activación de riego por baja luz
 
-**Resultado esperado:** el sistema debe indicar que no es necesario regar.
+Archivo: `prueba_suelo_seco_sin_riego.jpg`
 
+**Resultado observado:**
 
+- Humedad medida: 3071
+- Luz medida: 192
+- El sistema indica: `Suelo seco`
+- El sistema indica: `No riega: ya se puso el sol / hay poca luz`
 
-### 3. Calibración del sensor
+**Conclusión:**
 
-Se compararon las mediciones obtenidas en diferentes condiciones para establecer el umbral de humedad utilizado por el programa.
+El sistema detectó correctamente el suelo seco, pero no activó el riego porque la condición de luz no era adecuada.
 
-**Umbral utilizado:** 2500.
+### 3. Activación del riego
 
-Los valores mayores al umbral se interpretan como suelo seco y los valores menores como suelo húmedo.
+Archivo: `prueba_riego_exitoso.jpg`
 
-### 4. Comunicación del ESP32
+**Resultado observado:**
 
-Se comprobó que el ESP32 envía los datos del sensor en formato JSON mediante Bluetooth y conexión USB serial.
+- Humedad medida: 3191
+- El sistema indica: `Suelo seco`
+- El sistema indica: `Condiciones correctas: se riega`
+- Luego muestra: `>>> REGANDO <<<`
+- Finalmente: `Riego terminado`
 
+**Conclusión:**
 
+El sistema detectó correctamente una condición de suelo seco y activó el riego cuando se cumplieron las condiciones necesarias.
 
-### 5. Recepción de datos en Python
+## Resumen de validación
 
-Se verificó que la aplicación Python recibe los datos enviados por el ESP32.
+Las pruebas realizadas permitieron comprobar que el sistema:
 
+- detecta diferencias entre suelo húmedo y suelo seco,
+- evalúa condiciones adicionales antes de regar,
+- activa el riego cuando corresponde,
+- registra mensajes de control mediante el monitor serial.
 
+## Observaciones
 
-### 6. Base de datos y dashboard
+Durante algunas pruebas se presentaron mensajes relacionados con la conexión WiFi, por ejemplo:
 
-Se comprobó el almacenamiento y visualización de las mediciones cuando estas funciones estuvieron disponibles.
+- `No se pudo conectar al WiFi`
+- `WiFi desconectado. Reintentando...`
 
-
-
-## Resultado general
-
-Las pruebas permiten comprobar el funcionamiento de las distintas partes del sistema y detectar errores durante el desarrollo.
+Esto indica que la conectividad WiFi aún requería ajustes durante el desarrollo, pero no impidió validar la lógica principal del sistema de riego.
