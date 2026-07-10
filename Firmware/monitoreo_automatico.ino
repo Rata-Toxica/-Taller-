@@ -1,4 +1,4 @@
-
+#include "BluetoothSerial.h"
 //0 =======================
 // CONFIGURACION BLUETOOTH
 // =======================
