@@ -37,13 +37,13 @@ void setupBluetooth() {
 // =======================
 // REGAR
 // =======================
-void regar() {
-  Serial.println(">>> REGANDO <<<");
-  digitalWrite(relePin, RELE_ON);
-  delay(tiempoRiegoMs);
-  digitalWrite(relePin, RELE_OFF);
-  Serial.println("Riego terminado");
-}
+//void regar() {
+  //Serial.println(">>> REGANDO <<<");
+ // digitalWrite(relePin, RELE_ON);
+ // delay(tiempoRiegoMs);
+//  digitalWrite(relePin, RELE_OFF);
+ // Serial.println("Riego terminado");
+//}
 
 // =======================
 // ENVIAR DATOS
@@ -88,7 +88,7 @@ void loop() {
 
   if (sueloSeco) {
     Serial.println("Suelo seco");
-    regar(); // Riega si el suelo está seco
+//    regar(); // Riega si el suelo está seco
     seRiego = true;
   } else {
     Serial.println("Suelo húmedo: no se riega");
