@@ -26,7 +26,6 @@ En su interior se consideran espacios para:
 - Fuente de alimentación.
 - Adaptador de conexiones.
 - Cableado del sensor de humedad.
-- Cableado del sistema de riego.
 
 El diseño incluye una caja principal, una tapa desmontable y aberturas para las conexiones externas.
 
